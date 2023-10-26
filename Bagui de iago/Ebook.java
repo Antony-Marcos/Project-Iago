@@ -85,11 +85,6 @@ public class Ebook {
         System.out.println("Data de Publicação: " + dataPublicacao);
         System.out.println("Gêneros: " + generoEbooks);
         System.out.println("Preço: " + preco);
-        if (patrocinio != null) {
-            System.out.println("Patrocinado por: " + patrocinio.getNome());
-        } else {
-            System.out.println("Não patrocinado.");
-        }
     }
 }
 
