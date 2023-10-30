@@ -3,15 +3,15 @@ import java.util.ArrayList;
 import java.time.LocalDate;
 
 public class Ebook {
-    private String titulo;
-    private AutoresLeitores autor;
-    private Editoras editora;
-    private LocalDate dataPublicacao;
-    private ArrayList<String> generoEbooks;
-    private double preco;
-    private Editoras patrocinio;
+    protected String titulo;
+    protected UsuarioColaborador autor;
+    protected Editoras editora;
+    protected LocalDate dataPublicacao;
+    protected ArrayList<String> generoEbooks;
+    protected double preco;
+    protected Editoras patrocinio;
 
-    public Ebook(String titulo, AutoresLeitores autor, Editoras editora, LocalDate dataPublicacao, 
+    public Ebook(String titulo, UsuarioColaborador autor, Editoras editora, LocalDate dataPublicacao, 
                  ArrayList<String> generos, double preco, Editoras patrocinio) {
         this.titulo = titulo;
         this.autor = autor;

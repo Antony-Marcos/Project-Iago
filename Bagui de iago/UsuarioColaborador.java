@@ -1,20 +1,20 @@
 import java.util.ArrayList;
 
-public class AutoresLeitores {
-    private String nome;
+public class UsuarioColaborador {
+    private String cpf;
     private ArrayList<Ebook> ebooksEscritos;
 
-    public AutoresLeitores(String nome) {
-        this.nome = nome;
+    public UsuarioColaborador(String cpf) {
+        this.cpf = cpf;
         this.ebooksEscritos = new ArrayList<>();
     }
 
-    public String getNome() {
-        return nome;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public ArrayList<Ebook> getEbooksEscritos() {

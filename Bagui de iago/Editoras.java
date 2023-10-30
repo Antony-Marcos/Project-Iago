@@ -1,10 +1,11 @@
 import java.util.ArrayList;
 
-public class Editoras {
+public class Editoras extends Usuario{
     private String CNPJ;
     private ArrayList<Ebook> livrosPatrocinados;
 
-    public Editoras(String CNPJ) {
+    public Editoras(String nome, String email, String endereco, String numerocontato,String CNPJ) {
+        super(nome, email, endereco, numerocontato);
         this.CNPJ = CNPJ;
         this.livrosPatrocinados = new ArrayList<>();
     }
