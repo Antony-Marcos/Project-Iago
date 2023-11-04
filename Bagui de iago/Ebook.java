@@ -10,9 +10,11 @@ public class Ebook {
     protected ArrayList<String> generoEbooks;
     protected double preco;
     protected Editoras patrocinio;
+    protected int avaliacao;
+    protected String comentario;
 
     public Ebook(String titulo, UsuarioColaborador autor, Editoras editora, LocalDate dataPublicacao, 
-                 ArrayList<String> generos, double preco, Editoras patrocinio) {
+                 ArrayList<String> generos, double preco, Editoras patrocinio, int avaliacao, String comentario) {
         this.titulo = titulo;
         this.autor = autor;
         this.editora = editora;
@@ -20,6 +22,8 @@ public class Ebook {
         this.generoEbooks = generos;
         this.preco = preco;
         this.patrocinio = patrocinio;
+        this.avaliacao = avaliacao;
+        this.comentario = comentario;
     }
 
     public String getTitulo() {
@@ -78,6 +82,42 @@ public class Ebook {
         this.patrocinio = patrocinio;
     }
 
+     public int getAvalicao() {
+        return avaliacao;
+    }
+
+    public void setAvalicao(int avaliacao) {
+        this.avaliacao = avaliacao;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
+
+    
+    public void avaliarEbook(int estrelas){
+        
+ if (estrelas >= 0 && estrelas <= 5) {
+        this.avaliacao = estrelas;
+        System.out.println("Você avaliou o ebook com " + estrelas + " estrelas.");
+        } else {
+        System.out.println("Avaliação inválida. A avaliação deve estar entre 0 e 5 estrelas.");
+        }
+    }
+
+    
+    public void comentarEbook(String comentario){
+    
+        this.comentario = comentario;
+        System.out.println("Você comentou sobre o ebook: " + comentario);
+
+    }
+
+
     public void mostrarDados() {
         System.out.println("Título: " + titulo);
         System.out.println("Autor: " + autor.getNome());
@@ -85,6 +125,9 @@ public class Ebook {
         System.out.println("Data de Publicação: " + dataPublicacao);
         System.out.println("Gêneros: " + generoEbooks);
         System.out.println("Preço: " + preco);
+        System.out.println("Avalição: " + avaliacao);
+        System.out.println("Comentário: " + comentario);
+        
     }
 }
 
